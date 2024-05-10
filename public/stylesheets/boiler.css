@@ -1,0 +1,375 @@
+.karma-light {
+    font-family: "Karma", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+ body {
+     padding-top: 70px;/*da mainContainer bude ispod navbara*/
+ }
+
+.sadrzaj{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.navbar {
+    background-color: #1d3557;
+    box-shadow: 0 9px 10px 0 rgba(0, 0, 0, .2);
+    transition: transform 0.5s ease;
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+
+.active-link {
+    color: white;
+    /* Change link color to white */
+}
+
+.plavi-nav #logo {
+    width: 60px;
+    height: 50px;
+}
+
+/*navbar languages*/
+.languages {
+    display: flex;
+    /* Display languages horizontally */
+    align-items: center;
+    /* Align items vertically */
+    margin-right: 20px;
+}
+
+.languages a,
+.languages span {
+    margin-right: 5px;
+    /* Add some spacing between language links */
+    color: rgb(255, 255, 255);
+}
+
+.languages a:hover {
+    color: rgb(102, 198, 218);
+}
+
+/* Remove underline from all links */
+a {
+    text-decoration: none;
+}
+
+
+@media (max-width: 900px) {
+    body{
+        padding-top: 50px;
+    }
+    .plavi-nav #logo {
+        width: 40px;
+        height: 30px;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}
+
+/*usluge sliders left*/
+.slide-in-list {
+    padding: 0;
+    list-style-type: none;
+    /* Remove default list styles */
+}
+
+.slide-in-list li {
+    opacity: 0;
+    /* Initially hide the list items */
+}
+
+/* Apply animation to the list items */
+.slide-in-list li:nth-child(1) {
+    animation: slide-left 1s ease-in-out forwards;
+    /* Apply animation to the first list item */
+    animation-delay: 0.1s;
+    /* Add delay to match your desired timing */
+}
+
+.slide-in-list li:nth-child(2) {
+    animation: slide-left 1s ease-in-out forwards;
+    /* Apply animation to the second list item */
+    animation-delay: 0.3s;
+    /* Add delay to match your desired timing */
+}
+
+.slide-in-list li:nth-child(3) {
+    animation: slide-left 1s ease-in-out forwards;
+    /* Apply animation to the third list item */
+    animation-delay: 0.5s;
+    /* Add delay to match your desired timing */
+}
+
+.slide-in-list li:nth-child(4) {
+    animation: slide-left 1s ease-in-out forwards;
+    /* Apply animation to the third list item */
+    animation-delay: 0.7s;
+    /* Add delay to match your desired timing */
+}
+
+.slide-in-list li:nth-child(5) {
+    animation: slide-left 1s ease-in-out forwards;
+    /* Apply animation to the third list item */
+    animation-delay: 0.9s;
+    /* Add delay to match your desired timing */
+}
+
+/* Define animation keyframes */
+@keyframes slide-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*usluge sliders right*/
+.slide-in-list-right {
+    padding: 0;
+    list-style-type: none;
+    /* Remove default list styles */
+}
+
+.slide-in-list-right li {
+    opacity: 0;
+    /* Initially hide the list items */
+}
+
+/* Apply animation to the list items */
+.slide-in-list-right li:nth-child(1) {
+    animation: slide-right 1s ease forwards;
+    /* Apply animation to the first list item */
+    animation-delay: 0.1s;
+    /* Add delay to match your desired timing */
+    max-width: 100%;
+}
+
+.slide-in-list-right li:nth-child(2) {
+    animation: slide-right 1s ease forwards;
+    /* Apply animation to the second list item */
+    animation-delay: 0.3s;
+    /* Add delay to match your desired timing */
+    max-width: 100%;
+}
+
+.slide-in-list-right li:nth-child(3) {
+    animation: slide-right 1s ease forwards;
+    /* Apply animation to the third  item */
+    animation-delay: 0.5s;
+    /* Add delay to match your desired timing */
+    max-width: 100%;
+}
+
+.slide-in-list-right li:nth-child(4) {
+    animation: slide-right 1s ease forwards;
+    /* Apply animation to the third list item */
+    animation-delay: 0.7s;
+    /* Add delay to match your desired timing */
+    max-width: 100%;
+}
+
+.slide-in-list-right li:nth-child(5) {
+    animation: slide-right 1s ease forwards;
+    /* Apply animation to the third list item */
+    animation-delay: 0.9s;
+    /* Add delay to match your desired timing */
+    max-width: 100%;
+}
+
+/* Add more nth-child selectors with appropriate animation-delay values for more items */
+
+/* Define animation keyframes */
+@keyframes slide-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .slide-in-list-right li {
+        transform: translateX(-100%);
+        /* Position list items off-screen to the left on smaller screens */
+    }
+
+    .slide-in-list-right li:nth-child(1) {
+        animation: slide-left 1s ease forwards;
+        /* Apply animation to odd-indexed list items */
+            animation-delay: 1.1s;
+            /* Add delay to match your desired timing */
+            max-width: 100%;
+    }
+        .slide-in-list-right li:nth-child(2) {
+            animation: slide-left 1s ease forwards;
+            /* Apply animation to the second list item */
+            animation-delay: 1.3s;
+            /* Add delay to match your desired timing */
+            max-width: 100%;
+        }
+    
+        .slide-in-list-right li:nth-child(3) {
+            animation: slide-left 1s ease forwards;
+            /* Apply animation to the third  item */
+            animation-delay: 1.5s;
+            /* Add delay to match your desired timing */
+            max-width: 100%;
+        }
+    
+        .slide-in-list-right li:nth-child(4) {
+            animation: slide-left 1s ease forwards;
+            /* Apply animation to the third list item */
+            animation-delay: 1.7s;
+            /* Add delay to match your desired timing */
+            max-width: 100%;
+        }
+    
+        .slide-in-list-right li:nth-child(5) {
+            animation: slide-left 1s ease forwards;
+            /* Apply animation to the third list item */
+            animation-delay: 1.9s;
+            /* Add delay to match your desired timing */
+            max-width: 100%;
+        }
+
+}
+
+/*kontakt image*/
+/*MAKE IMAGE HAVE WIDTH OF SCREEN*/
+.top-img-container {
+    width: 100%;
+    overflow: hidden;
+    height: 50%;
+    top: 0;
+    left: 0;
+    position: relative;
+    /* Ensure the image does not overflow the container */
+}
+
+.top-img {
+    width: 100%;
+}
+
+.top-img img {
+    width: 100%;
+    height: 30%;
+}
+
+
+/*turisticka*/
+.turisticka-naslovna{
+    width: 100%;
+    height: 100vh ;
+    overflow: hidden;
+    position: relative;
+}
+/*zamraci naslovnu sliku*/
+.gradient-img {
+    position: relative;
+    float: left;
+}
+
+.gradient-img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+        /* Set the width to cover the entire container */
+        height: 100%;
+        /* Set the height to match the image height */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+}
+/*div that contains text to be above naslovna image*/
+.top-div {
+    position: absolute;
+    top: 50%;
+    /* Position the div 50% from the top */
+    left: 0;
+    /* Align the div to the left */
+    transform: translateY(-50%);
+    /* Move the div up by 50% of its own height to center vertically */
+    width: 100%;
+    /* Ensure the div spans the entire width of its parent */
+    
+    /* Align text horizontally center */
+    z-index: 2;
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 1024px) {
+    .turisticka-naslovna {
+        height: 70vh;
+        /* Decrease the height for smaller screens */
+    }
+
+    .top-div {
+        top: 50%;
+        /* Adjust the vertical position of the text */
+    }
+}
+@media (max-width: 1024px) {
+    .turisticka-naslovna {
+        height: 50vh;
+        /* Decrease the height for smaller screens */
+    }
+
+    .top-div {
+        top: 50%;
+        /* Adjust the vertical position of the text */
+    }
+}
+@media (max-width: 850px) {
+    .turisticka-naslovna {
+        height: 30vh;
+        /* Further decrease the height for even smaller screens */
+    }
+
+    .top-div h2{
+        top: 50%;
+        /* Adjust the vertical position of the text */
+        font-size: 20px;
+    }
+}
+
+.text {
+    color: white;
+    font-size: 24px;
+    /* You can add other styles as needed */
+}
+
+/*turisticka: text-slika*/
+.image-container {
+    height: 100%;
+    /* Set the height to 100% of the viewport height */
+    overflow: hidden;
+    /* Hide any overflow */
+}
+
+.image-container img {
+    height: 100%;
+    /* Ensure the image fills the height of its container */
+    width: auto;
+    /* Preserve the aspect ratio */
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordinacija Tomić</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Karma:wght@300;400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,200&family=Raleway:wght@800&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <!-- flag icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+</head>
+
+<body class="d-flex flex-column vh-100 karma-light">
+    <div class="page-content">
+        <%- include('../partials/navbar') %>
+            <main id="mainContainer" class="container-fluid px-0">
+                <%- body %>
+                    <%- include('../partials/footer') %>
+            </main>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Navbar at beggining is transparent, when scrolling down it gets background color -->
+            <script>
+                window.addEventListener('scroll', function () {
+                    var navbar = this.document.getElementById('mainNavbar');
+                    if (this.window.scrollY > 56) {
+                        navbar.classList.add('navbar-scrolled');
+                    } else {
+                        navbar.classList.remove('navbar-scrolled');
+                    }
+                });
+            </script>
+            <!-- Fancybox JS -->
+            <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+            <script>
+                Fancybox.bind("[data-fancybox]", {
+                    // Your custom options
+                });
+            </script>
+
+    </div>
+</body>
+
+</html>
